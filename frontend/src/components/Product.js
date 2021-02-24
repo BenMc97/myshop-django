@@ -19,7 +19,7 @@ function Product({product}) {
                     <div className="my-3">
                         
                         <Rating value={product.rating} color="#f8ea25" />
-                        <p>{`${product.numReviews} reviews`}</p>
+                        <p>{product.numReviews !== 1 ? `${product.numReviews} reviews` : `${product.numReviews} review`}</p>
                     </div>
                 </Card.Text>
 

@@ -134,7 +134,7 @@ function ProductPage({match, history}) {
                                             <strong>{review.name}</strong>
                                             <Rating value={review.rating} color='#f8e825'/>
                                             <p>{review.createdAt.substring(0,10)}</p>
-                                            <p>{review.comment}</p>
+                                            <p>{review.comment}</p>   
                                         </ListGroup.Item>
                                     ))}
                                     <br />

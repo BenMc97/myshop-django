@@ -19,9 +19,12 @@ import ProductListPage from './pages/ProductListPage'
 import ProductEditPage from './pages/ProductEditPage'
 import OrderListPage from './pages/OrderListPage'
 
+import ScrollToTop from './components/ScrollToTop'
+
 function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Header />
       <main className="py-3">
         <Container>

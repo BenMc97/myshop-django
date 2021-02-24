@@ -124,7 +124,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'myshop',
         'USER': 'BenMc97',
-        'PASSWORD': os.environ.get('DB_PASS'),
+        'PASSWORD': 'Sandybeauty1997!',
         'HOST': 'myshop-identifier.coomlwpbmkyj.eu-west-2.rds.amazonaws.com',
         'PORT': '5432',
     }

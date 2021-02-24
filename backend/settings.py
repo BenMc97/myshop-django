@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@(z+vxq=bw-!#=0z+@_sp7$jthwrqg_^o*$v=ilcce@c+m30&&'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -124,11 +124,12 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'myshop',
         'USER': 'BenMc97',
-        'PASSWORD': 'Sandybeauty1997!',
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
         'HOST': 'myshop-identifier.coomlwpbmkyj.eu-west-2.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
+
 
 
 
@@ -182,12 +183,14 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 CORS_ALLOW_ALL_ORIGINS = True
 
+
 AWS_QUERYSTRING_AUTH = False
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-AWS_ACCESS_KEY_ID = 'AKIARWRRGVTBGOFJD557'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = 'myshop-bucket-demo'
+
 
 
 if os.getcwd() == '/app':
